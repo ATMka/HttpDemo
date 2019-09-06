@@ -16,6 +16,7 @@ public class DemoService {
 
         Map<String,Object> parametersMap = new HashMap<String, Object>();
         parametersMap.put("showforum","282");
+
         HttpResponse<String> firstHttpQuery = HttpService.response("GET",url,headersMap,parametersMap);
 
         System.out.println(firstHttpQuery.getStatus()  + " : " + firstHttpQuery.getStatusText());
@@ -25,6 +26,5 @@ public class DemoService {
         }
         System.out.println("");
         System.out.println(firstHttpQuery.getBody());
-
     }
 }
